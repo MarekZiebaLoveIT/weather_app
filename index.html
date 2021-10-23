@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pogoda</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="select.html">
+                <h1>Nowe konto</h1>
+                <input type="text" placeholder="Imię">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Hasło">
+                <button type="submit">Jedziem tam :)</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="select.html">
+                <h1>Zaloguj się</h1>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Hasło">
+                <a href="#">Zapomniałem hasła</a>
+                <button>Zaloguj</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Witaj ponownie!</h1>
+                    <p>Zaloguj się, żeby sprawdzić pogodę dla swojego miasta</p>
+                    <button class="ghost" id="signIn">Zaloguj</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Witaj!</h1>
+                    <p>Stwórz nowe konto albo zaloguj się aby sprawdzić pogodę dla swojego miasta</p>
+                    <button class="ghost" id="signUp">Zarejestruj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="about">Inspired by <a href="https://dribbble.com/shots/5311359-Diprella-Login" target="_blank">SELECTO</a> || Created <span class="about">&copy;</span> 2021 by <strong>LoveIT</strong> Marek Zięba</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
