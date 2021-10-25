@@ -31,7 +31,7 @@ p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
-	letter-spacing: 0.5px;
+	letter-spacing: .5px;
 	margin: 20px 0 30px;
 }
 
@@ -54,7 +54,7 @@ button {
 	border-radius: 20px;
 	border: 1px solid #AE34F7;
 	background-color: #AE34F7;
-	color: #FFFFFF;
+	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -64,7 +64,7 @@ button {
 }
 
 button:active {
-	transform: scale(0.95);
+	transform: scale(0.45);
 }
 
 button:focus {
@@ -96,6 +96,7 @@ input {
 }
 
 .container {
+	/* border: 1px solid green; */
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -108,6 +109,7 @@ input {
 }
 
 .form-container {
+	/* border: 1px solid navy; */
 	position: absolute;
 	top: 0;
 	height: 100%;
@@ -151,6 +153,7 @@ input {
 }
 
 .overlay-container {
+	/* border: 1px solid yellow; */
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -166,10 +169,11 @@ input {
 }
 
 .overlay {
-	background: #AE34F7;
+	/* border: 1px solid brown; */
+	background: #AE34F7 no-repeat cover;
 	background: linear-gradient(to right, #DA32ED, #AE34F7, #743AE0);
-	background-repeat: no-repeat;
-	background-size: cover;
+	/* background-repeat: no-repeat;
+	background-size: cover; */
 	background-position: 0 0;
 	color: #fff;
 	position: relative;
@@ -185,6 +189,7 @@ input {
 }
 
 .overlay-panel {
+	/* border: 1px solid red; */
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -214,21 +219,6 @@ input {
 
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
-}
-
-.social-container {
-	margin: 20px 0;
-}
-
-.social-container a {
-	border: 1px solid #ddd;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
 }
 
 footer {
@@ -286,7 +276,14 @@ footer a {
 .selectCity {
 	position: absolute;
 	top: 180px;
-	left: 43%;
+	left: 35%;
+	letter-spacing: 20px;
+}
+
+select {
+	color: #5a1386;
+	border: none;
+	font-weight: bold;
 }
   
 
