@@ -5,28 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Pogoda</title>
 </head>
 
 <body>
+    <span class="errors"></span>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="select.html">
+            <form>
                 <h1>Nowe konto</h1>
-                <input type="text" placeholder="Imię">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Hasło">
-                <button>Jedziem tam :)</button>
+                <input id="name" placeholder="Nazwa użytkownika">
+                <input id="mail" placeholder="Email">
+                <input id="mail1" placeholder="Powtórz Email">
+                <input id="password" type="password" placeholder="Hasło">
+                <label for="check-one">
+                    <input type="checkbox" name="check-one" id="check-one" value="check-one">
+                    <i></i> <span>Akceptuję jakieś warunki</span>
+                </label>
+                <button class="logBtn" type="submit">Jedziem tam :)</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="select.html">
+            <form>
                 <h1>Zaloguj się</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Hasło">
+                <input id="mail2" type="mail" placeholder="Email">
+                <input id="password2" type="password" placeholder="Hasło">
                 <a href="#">Zapomniałem hasła</a>
-                <button>Zaloguj</button>
+                <button class="logBtn" type="submit">Zaloguj</button>
             </form>
         </div>
         <div class="overlay-container">

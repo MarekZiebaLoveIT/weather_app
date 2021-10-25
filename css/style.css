@@ -95,6 +95,79 @@ input {
 	width: 100%;
 }
 
+
+label {
+    display: block;
+    position: relative;
+    padding: .5rem 1rem;
+    line-height: 28px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+label i {
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    top: 6px;
+    font-style: normal;
+    color: rgb(139, 137, 137);
+}
+
+label span {
+    display: inline-block;
+    margin-left: 5px;
+    line-height: 25px;
+    color: rgb(70, 69, 69);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + i::before {
+    font-family: 'FontAwesome';
+    font-size: 28px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+}
+
+input[type="checkbox"]:checked + i {
+    position: relative;
+    animation: icon-beat .1s ease;
+}
+
+input[type="checkbox"]:checked + i + span {
+    transition: all .1s ease;
+}
+
+input[type="checkbox"] + i:before { 
+    content: "\f096";
+}
+
+input[type="checkbox"]:checked + i:before { 
+    content: "\f046";
+}
+
+input[type="checkbox"]:checked + i + span, input[type="checkbox"]:checked + i:before { 
+    color: #AE34F7; 
+}
+
+@keyframes 
+    icon-beat {  
+        0% {
+            transform: scale(2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+.errors {
+	background-color: rgba(255, 0, 0, 0.445);
+}
+
 .container {
 	/* border: 1px solid green; */
 	background-color: #fff;
