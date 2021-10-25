@@ -53,6 +53,10 @@ function validate(e) {
 	if (errors.length > 0) {
 		placeError.innerHTML = errors.join('<br>');
 	}
+	
+	if (errors.length === 0) {
+		location.href = 'select.html';
+	}
 }
 const form = document.querySelector('form');
 form.addEventListener('submit', validate);
@@ -78,5 +82,9 @@ logInVal();
 
 
 // zapomniałem hasła
+
+function forgPass() {
+	alert('No wiesz co... Nie zapomina się haseł :)');
+}
 
 
