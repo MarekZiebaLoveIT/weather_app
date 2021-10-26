@@ -1,5 +1,6 @@
 'use strict'
 
+
 // panel użytkownika, ruch lewa-prawa
 
 const signUpButton = document.querySelector('#signUp');
@@ -55,7 +56,7 @@ function validate(e) {
 	}
 	
 	if (errors.length === 0) {
-		location.href = 'select.html';
+		location.href = './html/select.html';
 	}
 }
 const form = document.querySelector('form');

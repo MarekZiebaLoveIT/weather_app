@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pogoda1</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="container-display">
+            <div class="chooseCity">
+                <h1>Wybierz miasto:</h1>
+                <br>
+            </div>
+            <div class="selectCity">
+                <select id="weatherCity">
+                    <option value="" disabled selected>LISTA MIAST</option>
+                </select>
+                <button class="confBtn" >OK</button>
+            </div>
+            <span class="errors"></span>
+        </div>
+
+        <div class="container-display">
+            <div class="cityPlace"></div>
+            <a href="#" class="otherCity">Wybierz inne miasto</a>
+            <div class="datePlace">23.10.2021</div>
+            <div class="timePlace">15.00</div>
+            <div class="tempPlace">18
+                <span class="temp">&deg;C</span>
+            </div>
+            <div class="icoPlace">
+                <img src="/assets/sun.png" alt="sunny" width="150px">
+                <img src="/assets/cloudy.png" alt="cloudy" width="150px">
+                <img src="/assets/rain.png" alt="lotOfRain" width="150px">
+                <img src="/assets/rainy.png" alt="rainy" width="150px">
+                <img src="/assets/snowfall.png" alt="snow" width="150px">
+            </div>
+            <div class="windPlace">
+                <img src="/assets/wind.svg" alt="windSign" height="25px">
+                10
+                <span class="wind">m/s</span>
+            </div>
+            <div class="pressPlace">
+                <img src="/assets/pressure.svg" alt="pressureSign" height="25px">
+                1025
+                <span class="press">hPa</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/weather.js"></script>
+</body>
+
+</html>
