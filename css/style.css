@@ -245,8 +245,6 @@ input[type="checkbox"]:checked + i + span, input[type="checkbox"]:checked + i:be
 	/* border: 1px solid brown; */
 	background: #AE34F7 no-repeat cover;
 	background: linear-gradient(to right, #DA32ED, #AE34F7, #743AE0);
-	/* background-repeat: no-repeat;
-	background-size: cover; */
 	background-position: 0 0;
 	color: #fff;
 	position: relative;
@@ -397,20 +395,22 @@ select {
 .container-display:nth-child(2) {
 	opacity: 0;
 }
-/*   
-.container-display {
-	border: 1px solid greenyellow;
-	width: 100%;
-	height: 480px;
+
+.logout {
+	background-color: #AE34F7;
 	position: absolute;
-	display: flex;
-	
-} */
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	padding-top: 3px;
+	bottom: 20px;
+	left: 45%;
+	border-radius: 10px;
+}
   
 
 
 /* Pogoda */
-
 
 
 .cityPlace {
@@ -426,6 +426,7 @@ select {
 	font-size: 40px;
 	font-weight: bold;
 	flex-wrap: wrap;
+	overflow: hidden;
 	border-radius: 10px;
 	border-bottom: 3px solid #AE34F7 ;
 	border-right: 3px solid #AE34F7 ;
@@ -479,7 +480,7 @@ select {
 	height: 100px;
 	position: absolute;
 	top: 175px;
-	left: 39%;
+	left: 35%;
 	line-height: 100px;
 	font-size: 90px;
 	font-weight: bold;
@@ -491,6 +492,7 @@ select {
 	font-size: 40px;
 	position: absolute;
 	top: -15px;
+	left: 170px;
 }
 
 .icoPlace {
@@ -502,21 +504,7 @@ select {
 	right: 30px;
 }
 
-.icoPlace img:nth-child(1){
-	display: block;
-}
-.icoPlace img:nth-child(2){
-	display: none;
-}
-.icoPlace img:nth-child(3){
-	display: none;
-}
-.icoPlace img:nth-child(4){
-	display: none;
-}
-.icoPlace img:nth-child(5){
-	display: none;
-}
+
 
 .windPlace {
 	/* border: 1px solid yellow; */
