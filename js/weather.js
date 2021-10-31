@@ -2,7 +2,7 @@
 
 const baseUrl = 'https://danepubliczne.imgw.pl/api/data/synop/';
 
-const getWeather = async city => {
+const getWeather = async () => {
     try {
         const response = await fetch(`${baseUrl}`);
         const data = await response.json();
@@ -40,27 +40,37 @@ getWeather().then(data => {
 
     const whichCity = document.querySelector('#weatherCity');
     whichCity.addEventListener('change', () => {
-        let i = whichCity.selectedIndex;
-        let cityPlace = document.querySelector('.cityPlace');
-        cityPlace.innerHTML = `${data[i-1].stacja}`;
-        let datePlace = document.querySelector('.datePlace');
-        datePlace.innerHTML = `${data[i-1].data_pomiaru}`;
-        let timePlace = document.querySelector('.timePlace');
-        timePlace.innerHTML = `${data[i-1].godzina_pomiaru}.00`;
-        let tempPlace = document.querySelector('.tempPlace');
-        tempPlace.innerHTML = `${data[i-1].temperatura} <span class="temp">&deg;C</span>`;
-        let windPlace = document.querySelector('.windPlace');
-        windPlace.innerHTML = `<img src="/assets/wind.svg" alt="windSign" height="25px"> ${data[i-1].predkosc_wiatru} m/s`;
-        let pressPlace = document.querySelector('.pressPlace');
-        pressPlace.innerHTML = `<img src="/assets/pressure.svg" alt="pressureSign" height="25px"> ${data[i-1].cisnienie} hPa`;
-        let icoPlace = document.querySelector('.icoPlace');
-        if (data[i-1].temperatura.value < 0 && data[i-1].suma_opadu.value > 1) {
+
+        const i = whichCity.selectedIndex - 1;
+
+        const cityPlace = document.querySelector('.cityPlace');
+        cityPlace.innerHTML = `${data[i].stacja}`;
+
+        const datePlace = document.querySelector('.datePlace');
+        datePlace.innerHTML = `${data[i].data_pomiaru}`;
+
+        const timePlace = document.querySelector('.timePlace');
+        timePlace.innerHTML = `${data[i].godzina_pomiaru}.00`;
+
+        const tempPlace = document.querySelector('.tempPlace');
+        tempPlace.innerHTML = `${data[i].temperatura} <span class="temp">&deg;C</span>`;
+
+        const windPlace = document.querySelector('.windPlace');
+        windPlace.innerHTML = `<img src="/assets/wind.svg" alt="windSign" height="25px"> ${data[i].predkosc_wiatru} m/s`;
+
+        const pressPlace = document.querySelector('.pressPlace');
+        pressPlace.innerHTML = `<img src="/assets/pressure.svg" alt="pressureSign" height="25px"> ${data[i].cisnienie} hPa`;
+
+
+        const icoPlace = document.querySelector('.icoPlace');
+        
+        if (data[i].temperatura.value < 0 && data[i].suma_opadu.value > 1) {
             icoPlace.innerHTML = `<img src="/assets/snowfall.png" alt="snow" width="150px">`;
-        } else if (data[i-1].temperatura.value > 0 && data[i-1].suma_opadu.value > 3) {
+        } else if (data[i].temperatura.value > 0 && data[i].suma_opadu.value > 3) {
             icoPlace.innerHTML = `<img src="/assets/rainy.png" alt="rainy" width="150px">`;
-        } else if (data[i-1].temperatura.value > 0 && data[i-1].suma_opadu.value == 0) {
+        } else if (data[i].temperatura.value > 0 && data[i].suma_opadu.value == 0) {
             icoPlace.innerHTML = `<img src="/assets/cloudy.png" alt="rainy" width="150px">`;
-        } else if (data[i-1].temperatura.value > 0 && data[i-1].suma_opadu.value > 10  && data[i-1].cisnienie.value < 998) {
+        } else if (data[i].temperatura.value > 0 && data[i].suma_opadu.value > 10  && data[i].cisnienie.value < 998) {
             icoPlace.innerHTML = `<img src="/assets/rain.png" alt="rainy" width="150px">`;
         } else {
             icoPlace.innerHTML = `<img src="/assets/sun.png" alt="sunny" width="150px">`;
