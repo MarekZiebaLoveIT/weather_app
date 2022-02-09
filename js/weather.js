@@ -56,24 +56,24 @@ getWeather().then(data => {
         tempPlace.innerHTML = `${data[i].temperatura} <span class="temp">&deg;C</span>`;
 
         const windPlace = document.querySelector('.windPlace');
-        windPlace.innerHTML = `<img src="/assets/wind.svg" alt="windSign" height="25px"> ${data[i].predkosc_wiatru} m/s`;
+        windPlace.innerHTML = `<img src="assets/wind.svg" alt="windSign" height="25px"> ${data[i].predkosc_wiatru} m/s`;
 
         const pressPlace = document.querySelector('.pressPlace');
-        pressPlace.innerHTML = `<img src="/assets/pressure.svg" alt="pressureSign" height="25px"> ${data[i].cisnienie} hPa`;
+        pressPlace.innerHTML = `<img src="assets/pressure.svg" alt="pressureSign" height="25px"> ${data[i].cisnienie} hPa`;
 
 
         const icoPlace = document.querySelector('.icoPlace');
         
         if (data[i].temperatura.value < 0 && data[i].suma_opadu.value > 1) {
-            icoPlace.innerHTML = `<img src="/assets/snowfall.png" alt="snow" width="150px">`;
+            icoPlace.innerHTML = `<img src="assets/snowfall.png" alt="snow" width="150px">`;
         } else if (data[i].temperatura.value > 0 && data[i].suma_opadu.value > 3) {
-            icoPlace.innerHTML = `<img src="/assets/rainy.png" alt="rainy" width="150px">`;
+            icoPlace.innerHTML = `<img src="assets/rainy.png" alt="rainy" width="150px">`;
         } else if (data[i].temperatura.value > 0 && data[i].suma_opadu.value == 0) {
-            icoPlace.innerHTML = `<img src="/assets/cloudy.png" alt="rainy" width="150px">`;
+            icoPlace.innerHTML = `<img src="assets/cloudy.png" alt="rainy" width="150px">`;
         } else if (data[i].temperatura.value > 0 && data[i].suma_opadu.value > 10  && data[i].cisnienie.value < 998) {
-            icoPlace.innerHTML = `<img src="/assets/rain.png" alt="rainy" width="150px">`;
+            icoPlace.innerHTML = `<img src="assets/rain.png" alt="rainy" width="150px">`;
         } else {
-            icoPlace.innerHTML = `<img src="/assets/sun.png" alt="sunny" width="150px">`;
+            icoPlace.innerHTML = `<img src="assets/sun.png" alt="sunny" width="150px">`;
         }
     });
     
